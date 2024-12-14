@@ -34,8 +34,8 @@ class Natural:
     def __ge__(self, other) -> bool:
         return not self < other
 
-    def __hash(self) -> int:
-        raise NotImplementedError()
+    def __hash__(self) -> int:
+        return hash(self.__v)
 
     def __bool__(self) -> bool:
-        raise NotImplementedError()
+        return bool(self.__v)
